@@ -13,27 +13,27 @@ namespace Pokemon_Console
         public void Run()
         {
             SeedPokemonTeam();
+            Runmenu();
         }
-        public void runmenu()
+        public void Runmenu()
         {
-            bool continueToRunMenu = false;
+            bool continueToRunMenu = true;
 
             while (continueToRunMenu)
             {
-                Console.WriteLine("What would you like to do?" +
-                    "1. See my Pokemon Team" +
-                    "2. Add new Pokemon to my Team" +
-                    "3. Update a Pokemon on my Team" +
-                    "4. Remove Pokemon from my Team" +
+                Console.WriteLine("What would you like to do?\n" +
+                    "1. See my Pokemon Team\n" +
+                    "2. Add new Pokemon to my Team\n" +
+                    "3. Update a Pokemon on my Team\n" +
+                    "4. Remove Pokemon from my Team\n" +
                     "5. Exit");
-                Console.Clear();
+               
                 int response = int.Parse(Console.ReadLine());
                 switch (response)
                 {
                     case 1:
-                        return;
-                        SeeMyPokemonTeam();
                         Console.Clear();
+                        SeeMyPokemonTeam();
                         break;
                     case 2:
                         AddPokemonToTeam();
